@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Panicle Detection</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        form {
+            text-align: center;
+        }
+
+        /* Style for the comments */
+        .comments-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px; /* Adjust as needed */
+        }
+
+        .comment {
+            text-align: center;
+            margin-top: 10px; /* Adjust as needed */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Panicle Detection</h1>
+        <h2>Let's find the number of panicles</h2>
+        <form action="/detect" method="post" enctype="multipart/form-data">
+            <label for="file">Upload Image:</label>
+            <input type="file" id="file" name="file" accept="image/*"><br><br>
+            <label for="method">Select Method:</label>
+            <select id="method" name="method">
+                <option value="detect_panicles">Detect Panicles</option>
+                <option value="kmeans_panicle_detection">KMeans Panicle Detection</option>
+            </select><br><br>
+            <input type="submit" value="Detect">
+        </form>
+    </div>
+</body>
+</html>
